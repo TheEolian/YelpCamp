@@ -8,9 +8,15 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
 var campgrounds = [
-        {name: "Salmon Creek", image: "https://farm5.staticflickr.com/4080/4938516049_eef5cbc734.jpg"},
-        {name: "Granite Hill", image: "https://farm9.staticflickr.com/8673/15989950903_8185ed97c3.jpg"}  ,  
-        {name: "Mountain Goat's Rest", image: "https://farm2.staticflickr.com/1281/4684194306_18ebcdb01c.jpg"}    
+        {name: "Salmon Creek", image: "https://farm8.staticflickr.com/7456/16332582188_e779c8614b.jpg"},
+        {name: "Granite Hill", image: "https://farm9.staticflickr.com/8673/15989950903_8185ed97c3.jpg"},  
+        {name: "Mountain Goat's Rest", image: "https://farm2.staticflickr.com/1281/4684194306_18ebcdb01c.jpg"},
+        {name: "Salmon Creek", image: "https://farm8.staticflickr.com/7456/16332582188_e779c8614b.jpg"},
+        {name: "Granite Hill", image: "https://farm9.staticflickr.com/8673/15989950903_8185ed97c3.jpg"},  
+        {name: "Mountain Goat's Rest", image: "https://farm2.staticflickr.com/1281/4684194306_18ebcdb01c.jpg"},
+        {name: "Salmon Creek", image: "https://farm8.staticflickr.com/7456/16332582188_e779c8614b.jpg"},
+        {name: "Granite Hill", image: "https://farm9.staticflickr.com/8673/15989950903_8185ed97c3.jpg"},  
+        {name: "Mountain Goat's Rest", image: "https://farm2.staticflickr.com/1281/4684194306_18ebcdb01c.jpg"}
 ];
 
 app.get("/", function(req, res){
