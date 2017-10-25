@@ -6,7 +6,7 @@ var express    = require("express"),
     Comment    = require("./models/comment"),
     seedDB     = require("./seeds");
     
-
+app.use(express.static(__dirname + "/public"));
     
     
 mongoose.connect("mongodb://localhost/yelp_camp", {useMongoClient: true});
