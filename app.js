@@ -17,6 +17,22 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 seedDB();
 
+// PASSPORT CONFIGURATION
+app.use(require("express-session")({
+    secret: "Rusty is the best and cutest dog in the world",
+    resave: false,
+    saveUninitialized: false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+// landing
+
 app.get("/", function(req, res){
     res.render("landing");
 });
