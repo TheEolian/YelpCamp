@@ -175,6 +175,12 @@ app.post("/login", passport.authenticate("local", {
 }), function(req, res){
 });
 
+// LOG OUT
+
+app.get("/logout", function(req, res){
+    req.logout();
+    res.redirect("/campgrounds");
+});
 
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("YelpCamp Server Running");
