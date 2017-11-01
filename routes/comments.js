@@ -35,8 +35,15 @@ router.post("/", isLoggedIn, function(req, res){
                     console.log(err);
                 }
                 else {
+                    // Add Username and ID to comment
+                    comment.author.id = req.user._id;
+                    comment.author.username = req.user.username;
+                    // Save comment
+                    comment.save();
+                    // push comment to campground
                     campground.comments.push(comment);
-                    campground.save();
+                    // save campground
+                    campground.save(); 
                     res.redirect('/campgrounds/' + campground._id);
                 }
             });
